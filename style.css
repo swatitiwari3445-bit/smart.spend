@@ -1,0 +1,329 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Arial, sans-serif;
+}
+
+body {
+    background: #f3f5fb;
+    color: #252b40;
+}
+
+/* HEADER */
+
+header {
+    background: linear-gradient(135deg, #171c3a, #414b91);
+    color: white;
+    padding: 25px 7%;
+}
+
+.brand h1 {
+    font-size: 28px;
+    margin-bottom: 6px;
+}
+
+.brand p {
+    color: #d8ddff;
+}
+
+/* MAIN */
+
+main {
+    width: 90%;
+    max-width: 1200px;
+    margin: 30px auto;
+}
+
+/* HERO */
+
+.hero {
+    background: linear-gradient(120deg, #5968d9, #8995f5);
+    color: white;
+    padding: 40px;
+    border-radius: 18px;
+    margin-bottom: 25px;
+}
+
+.hero h2 {
+    font-size: 32px;
+    margin-bottom: 10px;
+}
+
+/* SUMMARY CARDS */
+
+.summary {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 18px;
+    margin-bottom: 25px;
+}
+
+.card {
+    background: white;
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px #00000008;
+    border-bottom: 4px solid #6674df;
+}
+
+.card h3 {
+    color: #777f98;
+    font-size: 14px;
+    margin-bottom: 15px;
+}
+
+.card h2 {
+    color: #343f9b;
+    font-size: 25px;
+    overflow-wrap: anywhere;
+}
+
+/* PANELS */
+
+.panel {
+    background: white;
+    padding: 25px;
+    border-radius: 15px;
+    margin-bottom: 25px;
+    box-shadow: 0 4px 15px #00000008;
+}
+
+.panel h2 {
+    color: #292f55;
+    margin-bottom: 20px;
+}
+
+/* FORMS */
+
+form {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+}
+
+input, select {
+    width: 100%;
+    padding: 13px;
+    border: 1px solid #dce0ef;
+    border-radius: 8px;
+    outline: none;
+    font-size: 15px;
+    background: white;
+}
+
+input:focus, select:focus {
+    border-color: #6674df;
+}
+
+/* BUTTONS */
+
+button {
+    background: #5968d9;
+    color: white;
+    border: none;
+    padding: 13px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+button:hover {
+    background: #343f9b;
+    transform: translateY(-2px);
+}
+
+#expenseForm button,
+#budgetForm button {
+    grid-column: 1 / -1;
+}
+
+/* BUDGET PROGRESS */
+
+.progress-track {
+    background: #edf0f8;
+    height: 12px;
+    border-radius: 20px;
+    overflow: hidden;
+    margin-top: 22px;
+}
+
+#budgetProgress {
+    width: 0;
+    height: 100%;
+    background: #16845b;
+    border-radius: 20px;
+    transition: width 0.3s;
+}
+
+#budgetProgressText {
+    margin-top: 10px;
+    color: #777f98;
+    font-size: 13px;
+}
+
+.actions {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+    margin-top: 18px;
+}
+
+.actions button {
+    background: #414b91;
+}
+
+/* ANALYSIS */
+
+#analysis {
+    background: #f4f5ff;
+    padding: 20px;
+    border-radius: 10px;
+    line-height: 2;
+}
+
+#analysis hr {
+    border: 0;
+    border-top: 1px solid #ddd;
+    margin: 12px 0;
+}
+
+/* CHARTS */
+
+.charts {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.chart-panel {
+    min-width: 0;
+}
+
+.chart-box {
+    height: 300px;
+    position: relative;
+}
+
+.chart-panel p {
+    color: #777f98;
+    font-size: 13px;
+    text-align: center;
+    margin-top: 10px;
+}
+
+/* TABLE */
+
+.table-container {
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    min-width: 600px;
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 14px;
+    text-align: center;
+    border-bottom: 1px solid #e8eaf2;
+}
+
+th {
+    background: #eef0ff;
+    color: #343f9b;
+}
+
+.delete-button {
+    background: #e74c3c;
+    padding: 8px 12px;
+}
+
+.history-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 15px;
+}
+
+.history-heading h2 {
+    margin-bottom: 0;
+}
+
+.history-heading label {
+    font-size: 13px;
+    color: #555;
+}
+
+#historyEmpty {
+    text-align: center;
+    color: #777f98;
+    padding: 20px;
+}
+
+/* FOOTER */
+
+.privacy {
+    text-align: center;
+    color: #777f98;
+    font-size: 12px;
+    margin: 25px 0;
+}
+
+footer {
+    background: #171c3a;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+/* RESPONSIVE DESIGN */
+
+@media (max-width: 850px) {
+
+    .summary {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .charts {
+        grid-template-columns: 1fr;
+    }
+
+}
+
+@media (max-width: 550px) {
+
+    main {
+        width: 94%;
+    }
+
+    .hero {
+        padding: 25px;
+    }
+
+    .hero h2 {
+        font-size: 25px;
+    }
+
+    .summary {
+        grid-template-columns: 1fr;
+    }
+
+    form {
+        grid-template-columns: 1fr;
+    }
+
+    .history-heading {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .panel {
+        padding: 18px;
+    }
+
+}
